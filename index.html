@@ -7,12 +7,10 @@
   <title>Jayson Nuñez | IoT & Backend Developer</title>
   <meta name="description" content="Jayson Nuñez — IoT and Backend Developer specializing in device-to-cloud systems, secure APIs, and embedded solutions." />
 
-  <!-- Logo / Favicon (put your file here: assets/img/logo.png) -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo.png" />
   <link rel="apple-touch-icon" href="assets/img/logo.png" />
 
-  <!-- Open Graph (social preview) -->
   <meta property="og:title" content="Jayson Nuñez | IoT & Backend Developer" />
   <meta property="og:description" content="IoT and Backend Developer building secure device-to-cloud systems and scalable APIs." />
   <meta property="og:image" content="assets/img/logo.png" />
@@ -21,15 +19,12 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body>
-  <!-- Top Progress Bar -->
+<body id="top">
   <div class="scroll_progress" aria-hidden="true"></div>
 
-  <!-- Header / Navbar -->
-  <header class="header" id="#top">
+  <header class="header">
     <nav class="nav container" aria-label="Primary navigation">
       <a class="brand" href="#top">
-        <!-- Navbar Logo (uses assets/img/logo.png) -->
         <img src="assets/img/logo.png" alt="Jayson Nuñez Logo" class="brand_logo" />
         <span class="brand_text">Jayson Nuñez</span>
       </a>
@@ -44,7 +39,6 @@
           <li><a class="nav_link" href="#skills">Skills</a></li>
           <li><a class="nav_link" href="#projects">Projects</a></li>
           <li><a class="nav_link" href="#experience">Experience</a></li>
-          <li><a class="nav_link" href="#contact">Contact</a></li>
         </ul>
 
         <div class="nav_actions">
@@ -57,7 +51,6 @@
   </header>
 
   <main>
-    <!-- Hero -->
     <section class="hero">
       <div class="container hero_grid">
         <div class="hero_text reveal">
@@ -71,13 +64,13 @@
 
           <div class="hero_cta">
             <a class="btn btn_primary" href="#projects">View Projects</a>
-            <a class="btn btn_ghost" href="#contact">Contact</a>
+            <a class="btn btn_ghost" href="#experience">Experience</a>
           </div>
 
           <div class="hero_meta">
             <div class="meta_item">
               <span class="meta_label">Location</span>
-              <span class="meta_value">Balanacan, Mogpog, Marinduque</span>
+              <span class="meta_value">Balancan, Mogpog, Marinduque</span>
             </div>
             <div class="meta_item">
               <span class="meta_label">Email</span>
@@ -113,14 +106,11 @@
       </div>
     </section>
 
-    <!-- About -->
     <section class="section" id="about">
       <div class="container">
         <div class="section_head reveal">
           <h2 class="section_title">About</h2>
-          <p class="section_desc">
-            A quick overview of what I do and what I’m currently focusing on.
-          </p>
+          <p class="section_desc">A quick overview of what I do and what I’m currently focusing on.</p>
         </div>
 
         <div class="about_grid">
@@ -157,7 +147,6 @@
       </div>
     </section>
 
-    <!-- Skills -->
     <section class="section" id="skills">
       <div class="container">
         <div class="section_head reveal">
@@ -189,24 +178,18 @@
       </div>
     </section>
 
-    <!-- Projects -->
     <section class="section" id="projects">
       <div class="container">
         <div class="section_head reveal">
           <h2 class="section_title">Projects</h2>
-          <p class="section_desc">
-            A few highlights. Click “Details” to see a quick preview.
-          </p>
+          <p class="section_desc">A few highlights. Click “Details” to see a quick preview.</p>
         </div>
 
         <div class="projects_grid">
-          <!-- BMOSS -->
           <article class="project_card reveal">
             <div class="project_top">
               <h3 class="project_title">BMOSS – Biometric Motorcycle Security System</h3>
-              <p class="project_desc">
-                IoT-based motorcycle security system using biometric authentication and GSM alerts.
-              </p>
+              <p class="project_desc">IoT-based motorcycle security system using biometric authentication and GSM alerts.</p>
               <div class="tags">
                 <span class="tag">IoT</span>
                 <span class="tag">ESP32</span>
@@ -227,13 +210,10 @@
             </div>
           </article>
 
-          <!-- PLASTECH -->
           <article class="project_card reveal">
             <div class="project_top">
               <h3 class="project_title">PLASTECH – Smart Recycling WiFi Vendo System</h3>
-              <p class="project_desc">
-                IoT-powered plastic detection machine integrated with a WiFi vending reward system.
-              </p>
+              <p class="project_desc">IoT-powered plastic detection machine integrated with a WiFi vending reward system.</p>
               <div class="tags">
                 <span class="tag">IoT</span>
                 <span class="tag">ESP32-CAM</span>
@@ -257,7 +237,6 @@
       </div>
     </section>
 
-    <!-- Experience -->
     <section class="section" id="experience">
       <div class="container">
         <div class="section_head reveal">
@@ -266,7 +245,6 @@
         </div>
 
         <div class="timeline">
-          <!-- IoT / Backend Work -->
           <div class="timeline_item card reveal">
             <div class="timeline_top">
               <h3>IoT & Backend Developer</h3>
@@ -280,7 +258,6 @@
             </ul>
           </div>
 
-          <!-- Capstone -->
           <div class="timeline_item card reveal">
             <div class="timeline_top">
               <h3>Capstone Project – BMOSS (Biometric Motorcycle Security System)</h3>
@@ -296,6 +273,29 @@
         </div>
       </div>
     </section>
+
+    <div class="modal" id="project_modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal_title">
+      <div class="modal_backdrop" data-close="true"></div>
+      <div class="modal_panel" role="document">
+        <div class="modal_head">
+          <h3 id="modal_title">Project</h3>
+          <button class="icon_btn" type="button" id="modal_close" aria-label="Close modal">✕</button>
+        </div>
+        <div class="modal_body">
+          <p id="modal_desc" class="muted"></p>
+          <div class="modal_meta">
+            <div>
+              <span class="meta_label">Stack</span>
+              <span id="modal_stack" class="meta_value"></span>
+            </div>
+            <div>
+              <span class="meta_label">Link</span>
+              <a id="modal_link" class="meta_value" href="#" target="_blank" rel="noreferrer">Open</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="footer">
