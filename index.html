@@ -1,0 +1,374 @@
+<!--
+  File: index.html
+  Project: Responsive Personal Portfolio
+  Version: 1.0.0
+  Description: Responsive portfolio website (HTML/CSS/JS) with dark mode, projects modal, and contact form UI.
+  Author: (Your Name)
+  License: MIT (optional)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jayson Nuñez | Portfolio</title>
+  <meta name="description" content="Personal portfolio of Your Name: projects, skills, experience, and contact." />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Top Progress Bar -->
+  <div class="scroll_progress" aria-hidden="true"></div>
+
+  <!-- Header / Navbar -->
+  <header class="header" id="top">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#top">
+        <span class="brand_mark">JN</span>
+        <span class="brand_text">Jayson Nuñez</span>
+      </a>
+
+      <button class="icon_btn nav_toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav_menu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav_menu" id="nav_menu">
+        <ul class="nav_list">
+          <li><a class="nav_link" href="#about">About</a></li>
+          <li><a class="nav_link" href="#skills">Skills</a></li>
+          <li><a class="nav_link" href="#projects">Projects</a></li>
+          <li><a class="nav_link" href="#experience">Experience</a></li>
+          <li><a class="nav_link" href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav_actions">
+          <button class="icon_btn" id="theme_toggle" type="button" aria-label="Toggle dark mode">
+            <span class="theme_icon" aria-hidden="true">🌙</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero_grid">
+        <div class="hero_text reveal">
+          <h1 class="hero_title">
+            Hi, I’m <span class="accent">Jayson Nuñez</span> — IoT & Backend Developer.
+            </h1>
+            <p class="hero_subtitle">
+            I build secure device-to-cloud systems, embedded solutions, and scalable APIs
+            that power real-world applications.
+            </p>
+
+          <div class="hero_cta">
+            <a class="btn btn_primary" href="#projects">View Projects</a>
+            <a class="btn btn_ghost" href="#contact">Contact</a>
+          </div>
+
+          <div class="hero_meta">
+            <div class="meta_item">
+              <span class="meta_label">Location</span>
+              <span class="meta_value">Philippines</span>
+            </div>
+            <div class="meta_item">
+              <span class="meta_label">Email</span>
+              <a class="meta_value" href="mailto:you@email.com">nunezjayson82@gmail.com</a>
+            </div>
+            <div class="meta_item">
+              <span class="meta_label">GitHub</span>
+              <a class="meta_value" href="https://github.com/Juzzoooooooooo" target="_blank" rel="noreferrer">Juzzoooooooooo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero_card reveal">
+          <div class="profile">
+            <img src="assets/img/profile.png" alt="Portrait of Your Name" class="profile_img" />
+            <div class="profile_badge">
+              <span class="dot" aria-hidden="true"></span>
+              Open to work
+            </div>
+          </div>
+
+          <div class="quick_stats">
+            <div class="stat">
+              <span class="stat_num">2+</span>
+              <span class="stat_label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat_num">1+</span>
+              <span class="stat_label">Years</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section_head reveal">
+          <h2 class="section_title">About</h2>
+          <p class="section_desc">
+            A quick overview of what I do and what I’m currently focusing on.
+          </p>
+        </div>
+
+        <div class="about_grid">
+          <div class="card reveal">
+            <h3>Who I am</h3>
+                <p>
+                    I’m an <strong>IoT and Backend Developer</strong> who builds real-world systems—from connected devices and sensor-based solutions
+                    to reliable APIs and automation tools. I focus on <strong>clean architecture</strong>, <strong>readable code</strong>, secure data handling,
+                    and solid UX for dashboards that monitor and control devices.
+                </p>
+          </div>
+
+          <div class="card reveal">
+            <h3>What I do</h3>
+                <ul class="list">
+                    <li>IoT systems (ESP32/MCU integration, sensors, device-to-cloud communication)</li>
+                    <li>Backend APIs (REST, authentication, validation, role-based access)</li>
+                    <li>Real-time data handling (MQTT/HTTP, webhooks, logging, monitoring)</li>
+                    <li>Database design (normalized schema, reliable queries, audit-ready records)</li>
+                    <li>Integrations (SMS/GPS modules, Firebase, third-party services)</li>
+                </ul>
+          </div>
+
+          <div class="card reveal">
+            <h3>Currently learning</h3>
+            <div class="tags">
+              <span class="tag">Typescript</span>
+              <span class="tag">Kafka Apache</span>
+              <span class="tag">Performance</span>
+              <span class="tag">Security</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+  <div class="container">
+    <div class="section_head reveal">
+      <h2 class="section_title">Skills</h2>
+      <p class="section_desc">Technologies and tools I use for IoT and backend development.</p>
+    </div>
+
+    <div class="skills_grid reveal">
+      <div class="skill_card">
+        <h3>IoT Development</h3>
+        <p>ESP32, GSM/GPS modules (A9G), AT Commands, Sensors, Serial Communication</p>
+      </div>
+
+      <div class="skill_card">
+        <h3>Backend Development</h3>
+        <p>Node.js, Express, REST APIs, JWT Authentication, Input Validation</p>
+      </div>
+
+      <div class="skill_card">
+        <h3>Data & Communication</h3>
+        <p>MQTT, HTTP/HTTPS, Firebase, Real-time Data Logging, Webhooks</p>
+      </div>
+
+      <div class="skill_card">
+        <h3>Database & Tools</h3>
+        <p>MySQL / PostgreSQL, Schema Design, Git, GitHub, Postman</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section_head reveal">
+          <h2 class="section_title">Projects</h2>
+          <p class="section_desc">
+            A few highlights. Click “Details” to see a quick preview.
+          </p>
+        </div>
+
+        <div class="projects_grid">
+
+  <!-- BMOSS -->
+  <article class="project_card reveal">
+    <div class="project_top">
+      <h3 class="project_title">BMOSS – Biometric Motorcycle Security System</h3>
+      <p class="project_desc">
+        IoT-based motorcycle security system using biometric authentication and GSM alerts.
+      </p>
+      <div class="tags">
+        <span class="tag">IoT</span>
+        <span class="tag">ESP32</span>
+        <span class="tag">Biometrics</span>
+        <span class="tag">GSM</span>
+      </div>
+    </div>
+
+    <div class="project_actions">
+      <button class="btn btn_secondary project_details"
+        type="button"
+        data-title="BMOSS – Biometric Motorcycle Security System"
+        data-desc="An IoT motorcycle security system that uses fingerprint authentication to enable ignition. Integrated with GSM module for SMS alerts and real-time notifications in case of unauthorized access. Designed with secure device logic and fail-safe handling."
+        data-stack="ESP32, Fingerprint Sensor, GSM Module, AT Commands, Embedded C"
+        data-link="#">
+        Details
+      </button>
+    </div>
+  </article>
+
+
+  <!-- PLASTECH -->
+  <article class="project_card reveal">
+  <div class="project_top">
+    <h3 class="project_title">PLASTECH – Smart Recycling WiFi Vendo System</h3>
+    <p class="project_desc">
+      IoT-powered plastic detection machine integrated with a WiFi vending reward system.
+    </p>
+    <div class="tags">
+      <span class="tag">IoT</span>
+      <span class="tag">ESP32-CAM</span>
+      <span class="tag">WiFi Vendo</span>
+      <span class="tag">Automation</span>
+    </div>
+  </div>
+
+  <div class="project_actions">
+    <button class="btn btn_secondary project_details"
+      type="button"
+      data-title="PLASTECH – Smart Recycling WiFi Vendo System"
+      data-desc="A smart recycling system that detects plastic materials using ESP32-CAM with AI-based classification. When valid plastic is inserted, the system activates a servo mechanism and rewards users with WiFi access credits (WiFi Vendo integration). Designed with real-time detection, automated sorting, and embedded device logic."
+      data-stack="ESP32-CAM, Edge Impulse, Servo Motor, WiFi Vendo Integration, Embedded C"
+      data-link="#">
+      Details
+    </button>
+  </div>
+</article>
+
+</div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+  <div class="container">
+    <div class="section_head reveal">
+      <h2 class="section_title">Experience</h2>
+      <p class="section_desc">Practical IoT and backend systems I’ve developed.</p>
+    </div>
+
+    <div class="timeline">
+
+      <!-- IoT / Backend Work -->
+      <div class="timeline_item card reveal">
+        <div class="timeline_top">
+          <h3>IoT & Backend Developer</h3>
+          <span class="muted">2025 — Present</span>
+        </div>
+        <ul class="list">
+          <li>Designed and developed device-to-cloud IoT systems using ESP32 and GSM/GPS modules.</li>
+          <li>Built secure REST APIs with authentication, validation, and structured data handling.</li>
+          <li>Integrated real-time communication using HTTP/MQTT and cloud services.</li>
+          <li>Implemented reliable embedded logic with fail-safe and fallback mechanisms.</li>
+        </ul>
+      </div>
+
+      <!-- Capstone -->
+      <div class="timeline_item card reveal">
+        <div class="timeline_top">
+          <h3>Capstone Project – BMOSS (Biometric Motorcycle Security System)</h3>
+          <span class="muted">2024 — 2026</span>
+        </div>
+        <ul class="list">
+          <li>Developed a biometric-based ignition control system using fingerprint authentication.</li>
+          <li>Integrated GSM module for SMS alerts and real-time unauthorized access notifications.</li>
+          <li>Designed embedded security logic with secure authentication and device protection mechanisms.</li>
+          <li>Focused on system reliability, hardware integration, and real-world deployment readiness.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section_head reveal">
+          <h2 class="section_title">Contact</h2>
+          <p class="section_desc">Send a message. (This form is UI-only unless you connect a backend.)</p>
+        </div>
+
+        <div class="contact_grid">
+          <div class="card reveal">
+            <h3>Let’s work</h3>
+            <p class="muted">
+              If you want a portfolio like this customized, tell me your name, role, and projects.
+            </p>
+
+          <form class="card reveal" id="contact_form">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required />
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+
+            <button class="btn btn_primary" type="submit">Send Message</button>
+            <p class="form_note muted" id="form_note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="project_modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal_title">
+      <div class="modal_backdrop" data-close="true"></div>
+      <div class="modal_panel" role="document">
+        <div class="modal_head">
+          <h3 id="modal_title">Project</h3>
+          <button class="icon_btn" type="button" id="modal_close" aria-label="Close modal">✕</button>
+        </div>
+        <div class="modal_body">
+          <p id="modal_desc" class="muted"></p>
+          <div class="modal_meta">
+            <div>
+              <span class="meta_label">Stack</span>
+              <span id="modal_stack" class="meta_value"></span>
+            </div>
+            <div>
+              <span class="meta_label">Link</span>
+              <a id="modal_link" class="meta_value" href="#" target="_blank" rel="noreferrer">Open</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer_row">
+      <span>© <span id="year"></span> Jayson</span>
+      <a href="#top" class="to_top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
