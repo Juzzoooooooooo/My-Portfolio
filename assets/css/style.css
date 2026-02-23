@@ -48,6 +48,12 @@ body{
   line-height: 1.6;
 }
 
+.brand_logo{
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  border-radius: 12px;
+}
 img{ max-width: 100%; display: block; }
 a{ color: inherit; text-decoration: none; }
 .container{
