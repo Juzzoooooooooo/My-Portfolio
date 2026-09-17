@@ -6,6 +6,7 @@
 
   <title>Jayson Nuñez | IoT & Backend Developer</title>
   <meta name="description" content="Jayson Nuñez — IoT and Backend Developer specializing in device-to-cloud systems, secure APIs, and embedded solutions." />
+  <meta name="theme-color" content="#ffffff" />
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo.png" />
@@ -26,8 +27,41 @@
     <nav class="nav container" aria-label="Primary navigation">
       <a class="brand" href="#top">
         <img src="assets/img/logo.png" alt="Jayson Nuñez Logo" class="brand_logo" />
-        <span class="brand_text">Jayson Nuñez</span>
+        <span class="brand_identity">
+          <span class="brand_text">Jayson<span class="brand_dot">.</span></span>
+          <span class="brand_role">Portfolio</span>
+        </span>
       </a>
+
+      <form class="omnibox" id="browser_search" role="search" autocomplete="off" novalidate>
+        <svg class="omnibox_search_icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" />
+        </svg>
+        <label class="sr_only" for="browser_search_input">Search Google or type a URL</label>
+        <input
+          class="omnibox_input"
+          id="browser_search_input"
+          name="query"
+          type="text"
+          inputmode="search"
+          placeholder="Search Google or type a URL"
+          aria-label="Search Google or type a URL"
+          aria-keyshortcuts="Control+K Meta+K /"
+          autocapitalize="off"
+          spellcheck="false"
+        />
+        <span class="omnibox_shortcut" aria-hidden="true">Ctrl K</span>
+        <button class="omnibox_clear" id="browser_search_clear" type="button" aria-label="Clear search" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m7 7 10 10M17 7 7 17" />
+          </svg>
+        </button>
+        <button class="omnibox_go" type="submit" aria-label="Search or visit address">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14m-5-5 5 5-5 5" />
+          </svg>
+        </button>
+      </form>
 
       <button class="icon_btn nav_toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav_menu">
         <span class="hamburger" aria-hidden="true"></span>
@@ -54,17 +88,19 @@
     <section class="hero">
       <div class="container hero_grid">
         <div class="hero_text reveal">
+          <p class="eyebrow"><span class="eyebrow_dot" aria-hidden="true"></span>Hello, I’m Jayson Nuñez</p>
           <h1 class="hero_title">
-            Hi, I’m <span class="accent">Jayson Nuñez</span> — IoT & Backend Developer.
+            I build <span class="accent accent_blue">connected systems</span> that solve
+            <span class="accent accent_multi">real problems.</span>
           </h1>
           <p class="hero_subtitle">
-            I build secure device-to-cloud systems, embedded solutions, and scalable APIs
-            that power real-world applications.
+            IoT and backend developer creating secure device-to-cloud products,
+            intelligent automation, and scalable APIs.
           </p>
 
           <div class="hero_cta">
-            <a class="btn btn_primary" href="#projects">View Projects</a>
-            <a class="btn btn_ghost" href="#experience">Experience</a>
+            <a class="btn btn_primary" href="#projects">Explore my work <span aria-hidden="true">→</span></a>
+            <a class="btn btn_ghost" href="mailto:nunezjayson82@gmail.com">Let’s talk</a>
           </div>
 
           <div class="hero_meta">
@@ -88,12 +124,13 @@
             <img src="assets/img/profile.jpg" alt="Portrait of Jayson Nuñez" class="profile_img" />
             <div class="profile_badge">
               <span class="dot" aria-hidden="true"></span>
+              Available for opportunities
             </div>
           </div>
 
           <div class="quick_stats">
             <div class="stat">
-              <span class="stat_num">2+</span>
+              <span class="stat_num">5+</span>
               <span class="stat_label">Projects</span>
             </div>
             <div class="stat">
@@ -181,7 +218,7 @@
       <div class="container">
         <div class="section_head reveal">
           <h2 class="section_title">Projects</h2>
-          <p class="section_desc">A few highlights.</p>
+          <p class="section_desc">Selected IoT, robotics, and computer vision projects.</p>
         </div>
 
         <div class="projects_grid">
@@ -201,7 +238,7 @@
               <button class="btn btn_secondary project_details"
                 type="button"
                 data-title="BMOSS – Biometric Motorcycle Security System"
-                data-desc="An IoT motorcycle security system that uses fingerprintgit add . authentication to enable ignition. Integrated with a GSM module for SMS alerts and notifications in case of unauthorized access. Designed with secure device logic and fail-safe handling."
+                data-desc="An IoT motorcycle security system that uses fingerprint authentication to enable ignition. Integrated with a GSM module for SMS alerts and notifications in case of unauthorized access. Designed with secure device logic and fail-safe handling."
                 data-stack="ESP32, Fingerprint Sensor, GSM Module, AT Commands, Embedded C"
                 data-link="#">
                 Details
@@ -227,6 +264,78 @@
                 data-title="PLASTECH – Smart Recycling WiFi Vendo System"
                 data-desc="A smart recycling system that detects plastic materials using ESP32-CAM with AI-based classification. When valid plastic is inserted, the system activates a servo mechanism and rewards users with WiFi access credits (WiFi Vendo integration). Designed with real-time detection, automated sorting, and embedded device logic."
                 data-stack="ESP32-CAM, Edge Impulse, Servo Motor, WiFi Vendo Integration, Embedded C"
+                data-link="#">
+                Details
+              </button>
+            </div>
+          </article>
+
+          <article class="project_card reveal">
+            <div class="project_top">
+              <h3 class="project_title">Smart Pili Germination</h3>
+              <p class="project_desc">An automated monitoring system designed to support consistent pili seed germination.</p>
+              <div class="tags">
+                <span class="tag">IoT</span>
+                <span class="tag">Sensors</span>
+                <span class="tag">Automation</span>
+                <span class="tag">Agriculture</span>
+              </div>
+            </div>
+
+            <div class="project_actions">
+              <button class="btn btn_secondary project_details"
+                type="button"
+                data-title="Smart Pili Germination"
+                data-desc="A smart agriculture system that monitors environmental conditions affecting pili seed germination. Sensor readings help track the growing environment and support timely adjustments for more consistent germination."
+                data-stack="Microcontroller, Environmental Sensors, IoT Monitoring, Automation"
+                data-link="#">
+                Details
+              </button>
+            </div>
+          </article>
+
+          <article class="project_card reveal">
+            <div class="project_top">
+              <h3 class="project_title">YOLO Smart Traffic</h3>
+              <p class="project_desc">A computer vision traffic system that detects vehicles and analyzes road activity in real time.</p>
+              <div class="tags">
+                <span class="tag">YOLO</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">AI</span>
+                <span class="tag">Traffic</span>
+              </div>
+            </div>
+
+            <div class="project_actions">
+              <button class="btn btn_secondary project_details"
+                type="button"
+                data-title="YOLO Smart Traffic"
+                data-desc="An AI-powered traffic monitoring system that uses YOLO object detection to identify and count vehicles from a live camera feed. The collected traffic data can support congestion monitoring and smarter traffic management decisions."
+                data-stack="YOLO, Python, OpenCV, Computer Vision"
+                data-link="#">
+                Details
+              </button>
+            </div>
+          </article>
+
+          <article class="project_card reveal">
+            <div class="project_top">
+              <h3 class="project_title">DrainGuard Robot</h3>
+              <p class="project_desc">A robotic system built to inspect drainage channels and help identify potential blockages.</p>
+              <div class="tags">
+                <span class="tag">Robotics</span>
+                <span class="tag">IoT</span>
+                <span class="tag">Monitoring</span>
+                <span class="tag">Safety</span>
+              </div>
+            </div>
+
+            <div class="project_actions">
+              <button class="btn btn_secondary project_details"
+                type="button"
+                data-title="DrainGuard Robot"
+                data-desc="A mobile robotic platform for inspecting drainage channels and detecting conditions that may lead to clogging or flooding. It is designed to improve safety by allowing remote monitoring in areas that are difficult or hazardous to inspect manually."
+                data-stack="Microcontroller, Sensors, Motor Control, Wireless Monitoring"
                 data-link="#">
                 Details
               </button>
@@ -302,7 +411,7 @@
               <span class="meta_label">Stack</span>
               <span id="modal_stack" class="meta_value"></span>
             </div>
-            <div>
+            <div id="modal_link_row">
               <span class="meta_label">Link</span>
               <a id="modal_link" class="meta_value" href="#" target="_blank" rel="noreferrer">Open</a>
             </div>
