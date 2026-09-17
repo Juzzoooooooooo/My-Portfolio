@@ -147,107 +147,6 @@ a {
   text-transform: uppercase;
 }
 
-.omnibox {
-  display: flex;
-  min-width: 150px;
-  max-width: 380px;
-  height: 46px;
-  flex: 1 1 300px;
-  align-items: center;
-  gap: 8px;
-  padding: 0 6px 0 16px;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  background: var(--surface-strong);
-  color: var(--muted);
-  transition: background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
-}
-
-.omnibox:hover {
-  background: color-mix(in srgb, var(--surface-strong) 78%, var(--bg));
-  box-shadow: var(--shadow);
-}
-
-.omnibox:focus-within {
-  border-color: color-mix(in srgb, var(--blue) 68%, transparent);
-  background: var(--bg);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue) 16%, transparent), var(--shadow);
-}
-
-.omnibox_search_icon,
-.omnibox_clear svg,
-.omnibox_go svg {
-  width: 18px;
-  height: 18px;
-  flex: 0 0 auto;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2;
-}
-
-.omnibox_input {
-  width: 100%;
-  min-width: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  color: var(--text);
-  font-size: 14px;
-}
-
-.omnibox_input::placeholder {
-  color: var(--muted);
-  opacity: 1;
-}
-
-.omnibox_shortcut {
-  flex: 0 0 auto;
-  padding: 1px 7px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--bg);
-  color: var(--muted);
-  font-size: 10px;
-  font-weight: 650;
-  line-height: 20px;
-}
-
-.omnibox_clear,
-.omnibox_go {
-  display: inline-grid;
-  width: 34px;
-  height: 34px;
-  flex: 0 0 auto;
-  padding: 0;
-  place-items: center;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: var(--muted);
-  cursor: pointer;
-}
-
-.omnibox_clear[hidden] {
-  display: none;
-}
-
-.omnibox_clear:hover {
-  background: var(--surface-strong);
-  color: var(--text);
-}
-
-.omnibox_go {
-  background: var(--blue-soft);
-  color: var(--blue);
-}
-
-.omnibox_go:hover {
-  filter: brightness(0.97);
-}
-
 .nav_menu {
   display: flex;
   width: auto;
@@ -744,7 +643,7 @@ a.meta_value:hover {
 
 .skills_grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -777,6 +676,10 @@ a.meta_value:hover {
 
 .skill_card:nth-child(4)::before {
   background: var(--green);
+}
+
+.skill_card:nth-child(5)::before {
+  background: var(--red);
 }
 
 .projects_grid {
@@ -1047,10 +950,6 @@ a.meta_value:hover {
     gap: 18px;
   }
 
-  .omnibox {
-    max-width: 300px;
-  }
-
   .nav_link {
     padding-inline: 10px;
   }
@@ -1089,14 +988,6 @@ a.meta_value:hover {
 
   .nav {
     gap: 12px;
-  }
-
-  .omnibox {
-    max-width: none;
-  }
-
-  .omnibox_shortcut {
-    display: none;
   }
 
   .nav_menu {
@@ -1160,16 +1051,6 @@ a.meta_value:hover {
 @media (max-width: 620px) {
   .brand_role {
     display: none;
-  }
-
-  .omnibox {
-    height: 42px;
-    padding-left: 13px;
-  }
-
-  .omnibox_go {
-    width: 30px;
-    height: 30px;
   }
 
   .hero {
@@ -1253,11 +1134,6 @@ a.meta_value:hover {
   .brand_logo {
     width: 36px;
     height: 36px;
-  }
-
-  .omnibox_clear {
-    width: 30px;
-    height: 30px;
   }
 }
 

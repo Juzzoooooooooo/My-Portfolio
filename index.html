@@ -26,42 +26,13 @@
   <header class="header">
     <nav class="nav container" aria-label="Primary navigation">
       <a class="brand" href="#top">
-        <img src="assets/img/logo.png" alt="Jayson Nuñez Logo" class="brand_logo" />
+        <img src="assets/img/logo-light.png" alt="Jayson Nuñez Logo" class="brand_logo" id="brand_logo" />
         <span class="brand_identity">
           <span class="brand_text">Jayson<span class="brand_dot">.</span></span>
           <span class="brand_role">Portfolio</span>
         </span>
       </a>
 
-      <form class="omnibox" id="browser_search" role="search" autocomplete="off" novalidate>
-        <svg class="omnibox_search_icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" />
-        </svg>
-        <label class="sr_only" for="browser_search_input">Search Google or type a URL</label>
-        <input
-          class="omnibox_input"
-          id="browser_search_input"
-          name="query"
-          type="text"
-          inputmode="search"
-          placeholder="Search Google or type a URL"
-          aria-label="Search Google or type a URL"
-          aria-keyshortcuts="Control+K Meta+K /"
-          autocapitalize="off"
-          spellcheck="false"
-        />
-        <span class="omnibox_shortcut" aria-hidden="true">Ctrl K</span>
-        <button class="omnibox_clear" id="browser_search_clear" type="button" aria-label="Clear search" hidden>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m7 7 10 10M17 7 7 17" />
-          </svg>
-        </button>
-        <button class="omnibox_go" type="submit" aria-label="Search or visit address">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M5 12h14m-5-5 5 5-5 5" />
-          </svg>
-        </button>
-      </form>
 
       <button class="icon_btn nav_toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav_menu">
         <span class="hamburger" aria-hidden="true"></span>
@@ -154,8 +125,10 @@
             <h3>Who I am</h3>
             <p>
               I’m an <strong>IoT and Backend Developer</strong> who builds real-world systems—from connected devices and sensor-based solutions
-              to reliable APIs and automation tools. I focus on <strong>clean architecture</strong>, <strong>readable code</strong>, secure data handling,
-              and solid UX for dashboards that monitor and control devices.
+              to reliable APIs and automation tools. I'm <strong>collaborative by nature</strong> and <strong>creative in approach</strong>,
+              combining technical depth with a strong eye for clean design and thoughtful user experience.
+              I thrive working with others, enjoy solving problems from fresh angles, and care deeply about
+              building things that are not just functional, but <strong>crafted with intention</strong>.
             </p>
           </div>
 
@@ -173,10 +146,11 @@
           <div class="card reveal">
             <h3>Currently learning</h3>
             <div class="tags">
-              <span class="tag">TypeScript</span>
-              <span class="tag">Apache Kafka</span>
-              <span class="tag">Performance</span>
-              <span class="tag">Security</span>
+              <span class="tag">UI/UX Design</span>
+              <span class="tag">Figma</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">React</span>
+              <span class="tag">Framer Motion</span>
             </div>
           </div>
         </div>
@@ -209,6 +183,11 @@
           <div class="skill_card">
             <h3>Database & Tools</h3>
             <p>MySQL / PostgreSQL, Schema Design, Git, GitHub, Postman</p>
+          </div>
+
+          <div class="skill_card">
+            <h3>Networking & Infrastructure</h3>
+            <p>Fibre Optic Cabling, LAN Setup & Crimping, Network Troubleshooting, IP Configuration, Linux CLI, Bash Scripting</p>
           </div>
         </div>
       </div>
@@ -349,10 +328,23 @@
   <div class="container">
     <div class="section_head reveal">
       <h2 class="section_title">Experience</h2>
-      <p class="section_desc">Practical IoT, backend, and cybersecurity experiences.</p>
+      <p class="section_desc">Practical IoT, backend, cybersecurity, and freelance experiences.</p>
     </div>
 
     <div class="timeline">
+
+      <div class="timeline_item card reveal">
+        <div class="timeline_top">
+          <h3>Freelance Developer & IT Technician</h3>
+          <span class="muted">2024 — Present</span>
+        </div>
+        <ul class="list">
+          <li>Built custom websites and landing pages for local clients using HTML, CSS, and JavaScript.</li>
+          <li>Developed and deployed IoT-based solutions tailored to client needs, including sensor integration and device-to-cloud setups.</li>
+          <li>Performed LAN installation and configuration, including fibre optic and copper cable termination and testing.</li>
+          <li>Provided computer repair, hardware troubleshooting, OS installation, and general IT support services.</li>
+        </ul>
+      </div>
 
      <div class="timeline_item card reveal">
   <div class="timeline_top">
@@ -410,10 +402,6 @@
             <div>
               <span class="meta_label">Stack</span>
               <span id="modal_stack" class="meta_value"></span>
-            </div>
-            <div id="modal_link_row">
-              <span class="meta_label">Link</span>
-              <a id="modal_link" class="meta_value" href="#" target="_blank" rel="noreferrer">Open</a>
             </div>
           </div>
         </div>

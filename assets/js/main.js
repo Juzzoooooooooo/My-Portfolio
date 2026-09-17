@@ -13,9 +13,6 @@
     navToggle: document.querySelector(".nav_toggle"),
     navMenu: document.getElementById("nav_menu"),
     navLinks: Array.from(document.querySelectorAll(".nav_link")),
-    browserSearch: document.getElementById("browser_search"),
-    browserSearchInput: document.getElementById("browser_search_input"),
-    browserSearchClear: document.getElementById("browser_search_clear"),
     themeToggle: document.getElementById("theme_toggle"),
     themeColor: document.querySelector('meta[name="theme-color"]'),
     year: document.getElementById("year"),
@@ -25,8 +22,6 @@
     modalTitle: document.getElementById("modal_title"),
     modalDesc: document.getElementById("modal_desc"),
     modalStack: document.getElementById("modal_stack"),
-    modalLink: document.getElementById("modal_link"),
-    modalLinkRow: document.getElementById("modal_link_row"),
     modalClose: document.getElementById("modal_close"),
     detailsButtons: Array.from(document.querySelectorAll(".project_details")),
     contactForm: document.getElementById("contact_form"),
@@ -51,6 +46,9 @@
     if (iconEl) iconEl.textContent = icon;
     if (DOM.themeToggle) DOM.themeToggle.setAttribute("aria-label", label);
     if (DOM.themeColor) DOM.themeColor.setAttribute("content", theme === "light" ? "#ffffff" : "#111315");
+
+    const logo = document.getElementById("brand_logo");
+    if (logo) logo.src = theme === "dark" ? "assets/img/logo-dark.png" : "assets/img/logo-light.png";
 
     localStorage.setItem(STORAGE_KEYS.theme, theme);
   }
@@ -89,75 +87,6 @@
 
   function handleNavLinkClick() {
     closeMenu();
-  }
-
-  function getSearchDestination(rawValue) {
-    const value = rawValue.trim();
-    if (!value) return null;
-
-    const hasHttpProtocol = /^https?:\/\//i.test(value);
-    const looksLikeDomain = /^(?:[a-z0-9-]+\.)+[a-z]{2,}(?::\d+)?(?:[/?#]\S*)?$/i.test(value);
-    const looksLikeIp = /^(?:\d{1,3}\.){3}\d{1,3}(?::\d+)?(?:[/?#]\S*)?$/.test(value);
-    const looksLocal = /^(?:localhost|127\.0\.0\.1)(?::\d+)?(?:[/?#]\S*)?$/i.test(value);
-
-    if (hasHttpProtocol) {
-      try {
-        const url = new URL(value);
-        if (url.protocol === "http:" || url.protocol === "https:") return url.href;
-      } catch (_) {
-        // Invalid addresses fall through to a Google search.
-      }
-    }
-
-    if (looksLikeDomain || looksLikeIp || looksLocal) {
-      try {
-        const protocol = looksLocal || looksLikeIp ? "http" : "https";
-        return new URL(`${protocol}://${value}`).href;
-      } catch (_) {
-        // Invalid hostnames fall through to a Google search.
-      }
-    }
-
-    return `https://www.google.com/search?q=${encodeURIComponent(value)}`;
-  }
-
-  function updateSearchClearButton() {
-    if (!DOM.browserSearchInput || !DOM.browserSearchClear) return;
-    DOM.browserSearchClear.hidden = DOM.browserSearchInput.value.length === 0;
-  }
-
-  function initBrowserSearch() {
-    if (!DOM.browserSearch || !DOM.browserSearchInput) return;
-
-    DOM.browserSearch.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const destination = getSearchDestination(DOM.browserSearchInput.value);
-      if (destination) window.location.assign(destination);
-    });
-
-    DOM.browserSearchInput.addEventListener("input", updateSearchClearButton);
-
-    DOM.browserSearchClear?.addEventListener("click", () => {
-      DOM.browserSearchInput.value = "";
-      updateSearchClearButton();
-      DOM.browserSearchInput.focus();
-    });
-
-    document.addEventListener("keydown", (event) => {
-      const target = event.target;
-      const isTyping = target instanceof HTMLElement &&
-        (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName));
-      const focusShortcut = (event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k";
-      const slashShortcut = event.key === "/" && !isTyping && !event.ctrlKey && !event.metaKey && !event.altKey;
-
-      if (focusShortcut || slashShortcut) {
-        event.preventDefault();
-        DOM.browserSearchInput.focus();
-        DOM.browserSearchInput.select();
-      }
-    });
-
-    updateSearchClearButton();
   }
 
   function updateProgress() {
@@ -221,9 +150,6 @@
     DOM.modalTitle.textContent = title || "Project";
     DOM.modalDesc.textContent = desc || "";
     DOM.modalStack.textContent = stack || "";
-    const hasProjectLink = Boolean(link && link !== "#");
-    DOM.modalLink.href = hasProjectLink ? link : "#";
-    if (DOM.modalLinkRow) DOM.modalLinkRow.hidden = !hasProjectLink;
 
     DOM.modal.classList.add("open");
     DOM.modal.setAttribute("aria-hidden", "false");
@@ -246,7 +172,6 @@
           title: btn.dataset.title,
           desc: btn.dataset.desc,
           stack: btn.dataset.stack,
-          link: btn.dataset.link,
         });
       });
     });
@@ -284,7 +209,6 @@
   function init() {
     setYear();
     initTheme();
-    initBrowserSearch();
     initRevealObserver();
     initModal();
     initContactForm();
